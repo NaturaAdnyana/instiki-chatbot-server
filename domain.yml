@@ -1,0 +1,374 @@
+version: "3.1"
+
+intents:
+  - salam
+  - sampai_jumpa
+  - afirmasi
+  - menolak
+  - bahagia
+  - terima_kasih
+  - buruk
+  - bosan
+  - saya_bot
+  - registrasi
+  - biaya_daftar_ulang
+  - jadwal_kuliah
+  - daftar_kontak
+  - tentang
+  - kegiatan_mahasiswa
+  - visi_misi_nilai
+  - jurusan
+  - jurusan_mdi
+  - jurusan_kab
+  - jurusan_tip
+  - jurusan_bd
+  - jurusan_dkv
+  - jurusan_sk
+  - input_nama_nim
+  - rekomendasi_matkul
+  - biaya_krs
+  - ip_saat_ini
+  - sks_saat_ini
+  - pengaduan
+  - masalah_krs
+
+entities:
+  - nama
+  - nim
+
+slots:
+  nama:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: nama
+  nim:
+    type: float
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: nim
+
+responses:
+  utter_salam:
+    - text: "Halo! Salam menjadi dan memberi!🔥"
+
+  utter_menawarkan_bantuan:
+    - text: "Ada yang bisa IQA bantu?😊"
+      buttons:
+        - title: "Tahapan registrasi"
+          payload: "/registrasi"
+        - title: "Jadwal Perkuliahan"
+          payload: "/jadwal_kuliah"
+        - title: "Biaya Daftar Ulang"
+          payload: "/biaya_daftar_ulang"
+
+  utter_menawarkan_bantuan_mhs:
+    - text: "Ada yang bisa IQA bantu?😊"
+      buttons:
+        - title: "Rekomendasi Matkul"
+          payload: "/rekomendasi_matkul"
+        - title: "Biaya KRS"
+          payload: "/biaya_krs"
+        - title: "IP saya"
+          payload: "/ip_saat_ini"
+        - title: "SKS saya"
+          payload: "/sks_saat_ini"
+
+  utter_ceriakan:
+    - text: "Hari-hari kamu kurang baik? Jangan khawatir, IQA akan mencoba membuat hari kamu lebih cerah. Sini IQA tunjukin sesuatu😙"
+      image: "https://instiki.ac.id/wp-content/uploads/2024/04/Parallel-Self-Reflection-2048x1448.jpg"
+
+  utter_perkenalan_pak_made:
+    - text: "Ini adalah seni captivating digital painting karya Dosen INSTIKI, Dr. I Made Marthana Yusa, S.Ds., M.Ds. yang berjudul 'Parallel Self Reflection'."
+
+  utter_penjelasan_pak_made:
+    - text: "Panel tengah berfungsi sebagai titik fokus, di mana pandangan audiens ditarik ke dalam dunia introspeksi yang halus. Di sini, sang protagonis digambarkan dalam momen kontemplasi mendalam, dikelilingi oleh lanskap nyata yang mencerminkan cara kerja batin mereka. Interaksi antara cahaya dan bayangan menonjolkan kompleksitas pikiran dan emosi mereka. Sehingga mengundang audiens untuk menggali kedalaman kesadaran diri mereka sendiri. - tutur Pak Made👏"
+
+  utter_solusi_bosan:
+    - text: "Lho kamu bosan dengan aktivitas yang itu-itu saja? Rugi dong! Padahal INSTIKI punya banyak unit kegiatan mahasiswa seru yang bisa diikuti🤩. Sini IQA sebutin satu per satu"
+
+  utter_dapat_membantu:
+    - text: "Apakah penjelasan ini membantu kamu?"
+      buttons:
+        - title: "Sangat puas"
+          payload: "/afirmasi"
+        - title: "Kurang puas"
+          payload: "/menolak"
+
+  utter_maaf:
+    - text: "Maaf, aku belum bisa memahami pertanyaan kamu dengan baik😣. Boleh minta ulangi pertanyaannya? Atau bisa hubungi Whatsapp admin kita https://wa.me/6281339822383"
+
+  utter_cegah_guest:
+    - text: "Maaf banget, kamu harus menjadi mahasiswa INSTIKI terlebih dahulu untuk mengakses informasi ini. Silahkan kirimkan nama dan NIM anda atau hubungi whatsapp kita di https://wa.me/6281339822383"
+
+  utter_bahagia:
+    - text: "Siap! Ada hal lain yang bisa saya bantu?😋"
+      buttons:
+        - title: "Tahapan registrasi"
+          payload: "/registrasi"
+        - title: "Jadwal Perkuliahan"
+          payload: "/jadwal_kuliah"
+        - title: "Biaya Daftar Ulang"
+          payload: "/biaya_daftar_ulang"
+
+  utter_sama_sama:
+    - text: "Sama-sama. Ditunggu pertanyaan selanjutnya!"
+
+  utter_sampai_jumpa:
+    - text: "Semoga hari kamu menyenangkan, sampai jumpa! #SalamMenjadiDanMemberi🔥"
+
+  utter_saya_bot:
+    - text: "Perkenalkan saya IQA - INSTIKI Quick Assistant. Saya siap membantu kamu dalam menemukan informasi seputar kampus INSTIKI seoptimal mungkin😎. Silakan ajukan pertanyaan kamu di kolom di bawah ini. Namun, jika kamu perlu menghubungi admin, kamu dapat melakukannya melalui tautan berikut: https://wa.me/6281338969832"
+      buttons:
+        - title: "Tentang INSTIKI?"
+          payload: "/tentang"
+        - title: "Kontak?"
+          payload: "/daftar_kontak"
+        - title: "Saya lagi sedih😞"
+          payload: "/buruk"
+
+  utter_jadwal_kuliah:
+    - text: "Jadwal perkuliahan di kampus INSTIKI berlangsung dari Senin hingga Sabtu."
+
+  utter_jam_kuliah:
+    - text: "Untuk kelas reguler, perkuliahan dimulai pukul 07.30 dan berakhir pada waktu yang bervariasi tergantung pada jadwal mata kuliah. Sedangkan untuk kelas karyawan, perkuliahan berlangsung mulai pukul 17.20 hingga 22.20. Di luar jam perkuliahan, mahasiswa memiliki kebebasan untuk mengatur kegiatan sendiri.😍"
+
+  utter_registrasi_1:
+    - text: "Proses registrasi kampus INSTIKI dimulai dengan pengisian formulir data diri melalui halaman https://instiki.ac.id/apply-now-form/. Setelah terisi maka akan dialihkan ke Whatsapp kami dan melakukan pembayaran melalui transfer ke rekening resmi INSTIKI dan mengirimkan bukti pembayarannya melalui WhatsApp ke nomor resmi kami."
+
+  utter_registrasi_2:
+    - text: "Mohon juga untuk menyiapkan dokumen-dokumen seperti fotokopi Ijasah SMA/SMK/MA, KTP, dan KK (dapat menyusul). Untuk informasi lebih lanjut mengenai pembayaran (nomor rekening, biaya, dll), silakan hubungi https://wa.me/6281338969832"
+
+  utter_biaya_daftar_ulang_1:
+    - text: "Biaya daftar ulang terdiri dari Biaya Kuliah Semester 1, Angsuran DPP Pertama, Biaya Orientasi, Casual Jacket, Jas Almamater, T-Shirt, Buku Pedoman, Seminar, dan lain sebagainya. Untuk memperoleh beasiswa, disarankan mendaftar pada awal periode."
+
+  utter_biaya_daftar_ulang_2:
+    - text: "Selain itu, biaya daftar ulang hanya dapat dikembalikan secara penuh jika calon mahasiswa diterima melalui SBMPTN Jalur Tulis, memperoleh Beasiswa Bidik Misi, atau tidak lulus Ujian Nasional."
+
+  utter_biaya_daftar_ulang_3:
+    - text: "Untuk rincian lengkap mengenai biaya daftar ulang, silahkan kunjungi berkas berikut: https://drive.google.com/file/d/1BD8oZamTgJP-F5oFGHzSGoRZimc0PxXG/view?usp=drive_link . Jika masih ada yang ingin ditanyakan, silakan hubungi kami di WhatsApp: https://wa.me/6281338969832"
+
+  utter_daftar_kontak:
+    - text: "Untuk informasi lebih lanjut atau pertanyaan mengenai kampus INSTIKI, kamu dapat mengakses daftar kontak resmi kami (FO, BAAK, Kemahasiswaan, dll) melalui tautan berikut: https://linktr.ee/instikiofficial"
+
+  utter_email_kampus:
+    - text: "Kamu juga dapat menghubungi kami melalui alamat email di 'humas@instiki.ac.id'."
+
+  utter_alamat_kampus:
+    - text: "Jika kamu berada di Bali, kami siap melayani kamu dengan kunjungi kami langsung di Jl. Tukad Pakerisan No. 97. Untuk petunjuk lokasi, silakan cek tautan berikut: https://maps.app.goo.gl/tM9BCkZpei7YjiSH9"
+
+  utter_tentang:
+    - text: "INSTIKI adalah perguruan tinggi swasta Indonesia yang didirikan pada tanggal 18 April 2008 dan berada di bawah pengelolaan Yayasan Wahana Widya Wisesa Denpasar, Bali. Berdasarkan SK Mendiknas RI No. 70/D/O/2008,INSTIKI memiliki dua program studi yaitu Sistem Komputer dan Teknik Informatika."
+      buttons:
+        - title: "Visi & Misi?"
+          payload: "/visi_misi_nilai"
+        - title: "Jurusan?"
+          payload: "/jurusan"
+        - title: "Kontak?"
+          payload: "/daftar_kontak"
+
+  utter_visi:
+    - text: "Visi INSTIKI adalah Unggul dalam Inovasi Teknologi untuk Berkontribusi pada Industri Kreatif, Pariwisata, dan Budaya."
+
+  utter_misi:
+    - text: "Sedangkan misi INSTIKI adalah (1) Menyelenggarakan dan meningkatkan kualitas kegiatan pendidikan yang berfokus pada perkembangan teknologi untuk mendukung industri kreatif, pariwisata dan budaya, (2) Menyelenggarakan program inovasi keilmuan dengan merencanakan, melaksanakan, mengevaluasi, dan mengembangkan kegiatan penelitian, (3) Menyelenggarakan program pengabdian kepada masyarakat sebagai bentuk penyebarluasan ilmu dan teknologi yang tepat guna serta bermanfaat bagi pemangku kepentingan, (4) Membekali lulusan dengan pengetahuan praktis dan keterampilan profesional yang mendorong tumbuhnya jiwa kewirausahaan, dan (5) Membangun etos kerja yang berasaskan kekeluargaan sehingga terbentuk suasana akademik yang harmonis antar civitas akademika."
+
+  utter_nilai:
+    - text: "Untuk mencapai visi dan misi tersebut, INSTIKI memiliki nilai-nilai yang menjadi pedoman bagi seluruh civitas, yaitu: 'Kebersamaan dan kekeluargaan dengan semangat menjadi dan memberi' yang terdiri dari; (1) Kebersamaan dalam belajar untuk menjadi pribadi tangguh yang selalu berfikir positif, (2) Satu keluarga saling membantu untuk tumbuh dan berkembang, dan (3) Berkarya dengan semangat menjadi dan memberi."
+
+  utter_kegiatan_mahasiswa_1:
+    - text: "Unit kegiatan mahasiswa di kampus INSTIKI sangat beragam dan menarik lho😍 Sini IQA sebutin satu per satu! Jangan lupa juga nanti dipilih sesuai minat & bakat kamu ya, untuk penjelasan masing-masing Ormawa bisa dicek disini https://www.instagram.com/pkkmbinstiki/"
+
+  utter_kegiatan_mahasiswa_2:
+    - text: "BEM, HIMA-TI, HIMA-SK, HIMA-DKV, HIMA-BD, FPK-KMH, FPK-IMMUKI, FPK-KEMAHKRIS, Seniman Tari INSTIKI, Tabuh 'Arsanta Adhimukti', INSTIKI Music Vocal, INSTIKI Inspirational Dance, Himpunan Fotografer INSTIKI, Lingkaran Film, GRADASI, INSTIKI Nihon Bunka, Teater INSTIKI (TETRIS), Badminton, Basket, Body Healthy & Body Building, Futsal INSTIKI, eSports INSTIKI, Jurnalistik dan Pers INSTIKI, English Club of INSTIKI (ECSI), KSR PMI, MAPALA, Pramuka, INSTIKI Developer Club, Robotika, Literasi, Rasikuntan, dan PSM Sankta Melodia🥵. BANYAK BANGET!"
+
+  utter_jurusan:
+    - text: "Kampus INSTIKI memiliki beberapa jurusan yang dapat dipilih oleh calon mahasiswa, yaitu: (1) Teknik Informatika Manajemen Data & Informasi (TI-MDI), (2) Teknologi Informatika Komputer Akuntansi & Bisnis (TI-KAB), (3) Teknologi Informatika Teknik Informasi Pariwisata (TI-TIP), (4) Bisnis Digital - Manajemen Bisnis (BD-MB), (5) Desain Komunikasi Visual - Desain Grafis & Multimedia (DKV-DGM), dan (6) Sistem Komputer (SK)."
+      buttons:
+        - title: "TI-MDI?"
+          payload: "/jurusan_mdi"
+        - title: "TI-KAB?"
+          payload: "/jurusan_kab"
+        - title: "TI-TIP?"
+          payload: "/jurusan_tip"
+        - title: "BD-MB?"
+          payload: "/jurusan_bd"
+        - title: "DKV-DGM?"
+          payload: "/jurusan_dkv"
+        - title: "SK?"
+          payload: "/jurusan_sk"
+
+  utter_jurusan_mdi:
+    - text: "Jurusan TI Manajemen Data & Informasi (MDI) menawarkan pendekatan pembelajaran yang taktis dan efektif, dengan fokus pada bidang-bidang utama seperti Sistem Informasi Manajemen, Pemrograman, Pengelolaan Perangkat Lunak, Mobile Programming, Manajemen Berbasis Data, Manajemen & Organisasi, Jaringan & Komunikasi Data, dan banyak lagi."
+
+  utter_jurusan_mdi_2:
+    - text: "Program kami dirancang untuk mempersiapkan kamu menjadi profesional di berbagai industri, termasuk Pengembang Aplikasi, Konsultan TI, Peneliti TI, Bisnis Elektronik, Manajemen Rantai Suplai, Bisnis Pintar, Manajemen Hubungan Pelanggan, serta membantu kamu merintis bisnis teknologi sebagai Chief Executive Officer dan Chief Marketing Officer yang ideal."
+      buttons:
+        - title: "TI-KAB?"
+          payload: "/jurusan_kab"
+        - title: "TI-TIP?"
+          payload: "/jurusan_tip"
+        - title: "BD-MB?"
+          payload: "/jurusan_bd"
+        - title: "DKV-DGM?"
+          payload: "/jurusan_dkv"
+        - title: "SK?"
+          payload: "/jurusan_sk"
+
+  utter_jurusan_kab:
+    - text: "Jurusan TI Komputer Akuntansi & Bisnis (KAB) didesain untuk memenuhi kebutuhan industri yang membutuhkan tenaga kerja terampil dalam bidang komputer, serta memiliki keahlian di bidang akuntansi dan bisnis."
+
+  utter_jurusan_kab_2:
+    - text: "Kami menawarkan pelatihan dalam berbagai aspek seperti Sistem Informasi Akuntansi, Anggaran Perusahaan, Manajemen Keuangan, Akuntansi Perbankan, Audit Keuangan, Perpajakan, Aplikasi Akuntansi, Etika Bisnis, Manajemen Pemasaran, Perbankan & Lembaga Keuangan, Ekonomi Mikro & Makro, Business Intelligence, dan masih banyak lagi."
+      buttons:
+        - title: "TI-MDI?"
+          payload: "/jurusan_mdi"
+        - title: "TI-TIP?"
+          payload: "/jurusan_tip"
+        - title: "BD-MB?"
+          payload: "/jurusan_bd"
+        - title: "DKV-DGM?"
+          payload: "/jurusan_dkv"
+        - title: "SK?"
+          payload: "/jurusan_sk"
+
+  utter_jurusan_tip:
+    - text: "Jurusan TI Teknologi Informasi Pariwisata (TIP) kami dirancang khusus untuk memenuhi kebutuhan industri pariwisata yang membutuhkan tenaga kerja yang handal di bidang Teknologi Informasi, serta memiliki keahlian di bidang pariwisata dan perhotelan."
+
+  utter_jurusan_tip_2:
+    - text: "Kami menawarkan pelatihan dalam berbagai aspek seperti Sistem Informasi Pariwisata, Manajemen Pariwisata, Bisnis Pariwisata, E-Tourism, Business Hotel Management, Digital Marketing Pariwisata, HRD System, dan banyak lagi."
+      buttons:
+        - title: "TI-MDI?"
+          payload: "/jurusan_mdi"
+        - title: "TI-KAB?"
+          payload: "/jurusan_kab"
+        - title: "BD-MB?"
+          payload: "/jurusan_bd"
+        - title: "DKV-DGM?"
+          payload: "/jurusan_dkv"
+        - title: "SK?"
+          payload: "/jurusan_sk"
+
+  utter_jurusan_bd:
+    - text: "Jurusan Bisnis Digital - Manajemen Bisnis merupakan gabungan ilmu Manajemen Bisnis dengan Teknologi, yang merupakan kombinasi yang sangat dibutuhkan di dunia kerja saat ini dan masa depan."
+
+  utter_jurusan_bd_2:
+    - text: "Kami memiliki tujuan untuk menghasilkan ahli di berbagai bidang seperti Manajemen Ekonomi, Manajemen Operasional, Manajemen Pemasaran, Manajemen Sumber Daya Manusia, Manajemen Keuangan, Analisis Bisnis Digital, Etika Bisnis, E-Commerce, Pemasaran Digital, Personal Branding, Public Speaking, Kewirausahaan Digital, dan banyak lagi."
+      buttons:
+        - title: "TI-MDI?"
+          payload: "/jurusan_mdi"
+        - title: "TI-KAB?"
+          payload: "/jurusan_kab"
+        - title: "TI-TIP?"
+          payload: "/jurusan_tip"
+        - title: "DKV-DGM?"
+          payload: "/jurusan_dkv"
+        - title: "SK?"
+          payload: "/jurusan_sk"
+
+  utter_jurusan_dkv:
+    - text: "Jurusan DKV - Desain Grafis - Multimedia adalah pilihan yang tepat untuk kamu yang kreatif dan inovatif yang menyukai komunikasi melalui gambar maupun video (Desain Grafis & Multimedia). Prodi ini adalah prodi untuk kamu yang estetik banget."
+
+  utter_jurusan_dkv_2:
+    - text: "Disini kamu dapat menerapkan prinsip-prinsip estetika dalam berbagai platform. Dengan target Profesional di bidang Graphic Designer, Photography, Videography, Broadcasting, Animator, Game Developer, arsitek, Content Creator, Sinematografi, Spesialis Multimedia, Desainer Produk Komersial dan Industri, Web Desainer, Penerbit Digital, Periklanan dan banyak lagi."
+      buttons:
+        - title: "TI-MDI?"
+          payload: "/jurusan_mdi"
+        - title: "TI-KAB?"
+          payload: "/jurusan_kab"
+        - title: "TI-TIP?"
+          payload: "/jurusan_tip"
+        - title: "BD-MB?"
+          payload: "/jurusan_bd"
+        - title: "SK?"
+          payload: "/jurusan_sk"
+
+  utter_jurusan_sk:
+    - text: "Jurusan Sistem Komputer menawarkan proses pembelajaran interaktif yang dirancang untuk membentuk lulusan yang profesional di bidang sistem komputer. Kemampuan yang seimbang dalam penguasaan hardware dan software komputer sangat penting untuk mendukung karier di berbagai profesi seperti IT, Mobile Programmer, Technical Support, Network Administrator, Automation System, dan Smart Robotic System."
+
+  utter_jurusan_sk_2:
+    - text: "Mata kuliah yang kami tawarkan mencakup berbagai topik penting seperti Pemrograman Visual, Pemrograman Web, Pemrograman Berorientasi Objek, Keamanan Siber, Manajemen Jaringan dan Server, Kecerdasan Buatan, Sensor & Transduser, Robotika, Sistem Kendali, dan masih banyak lagi.😎"
+      buttons:
+        - title: "TI-MDI?"
+          payload: "/jurusan_mdi"
+        - title: "TI-KAB?"
+          payload: "/jurusan_kab"
+        - title: "TI-TIP?"
+          payload: "/jurusan_tip"
+        - title: "BD-MB?"
+          payload: "/jurusan_bd"
+        - title: "DKV-DGM?"
+          payload: "/jurusan_dkv"
+
+  utter_masalah_krs:
+    - text: "Mohon maaf atas ketidaknyamanan yang a alami. Untuk mengadukan masalah KRS, kamu dapat menghubungi BAAK melalui WhatsApp https://wa.me/6281339822393"
+
+  utter_nama_nim:
+    - text: "Hai {nama} dengan NIM {nim}! Data kamu telah diverifikasi."
+
+  utter_nama_only:
+    - text: "Hai {nama}! Senang bertemu dengan kamu. Kami siap memperkenalkan kamu tentang INSTIKI."
+
+  utter_nim_only:
+    - text: "Hai! NIM kamu {nim} telah diverifikasi."
+
+  utter_data_tidak_cocok:
+    - text: "Maaf, NIM kamu {nim} tidak ditemukan dalam sistem kami. Silahkan cek kembali & ulangi langkah."
+
+  utter_matkul_mdi:
+    - text: "Oh kamu bingung dengan mata kuliah yang harus diambil? Jangan khawatir, INSTIKI sudah menyiapkan pohon mata kuliah khusus TI-MDI! Berikut gambarnya:"
+      image: "https://sads.instiki.ac.id/assets/doc/Pohon-MTI.jpg"
+
+  utter_matkul_kab:
+    - text: "Oh kamu bingung dengan mata kuliah yang harus diambil? Jangan khawatir, INSTIKI sudah menyiapkan pohon mata kuliah khusus TI-KAB! Berikut gambarnya:"
+      image: "https://sads.instiki.ac.id/assets/doc/Pohon-KAB.jpg"
+
+  utter_matkul_tip:
+    - text: "Oh kamu bingung dengan mata kuliah yang harus diambil? Jangan khawa tir, INSTIKI sudah menyiapkan pohon mata kuliah khusus TI-TIP! Berikut gambarnya:"
+      image: "https://sads.instiki.ac.id/assets/doc/Pohon-MTI.jpg"
+
+  utter_matkul_bd:
+    - text: "Oh kamu bingung dengan mata kuliah yang harus diambil? Jangan khawatir, INSTIKI sudah menyiapkan pohon mata kuliah khusus BD-MB! Berikut gambarnya:"
+      image: "https://sads.instiki.ac.id/assets/doc/Pohon-BD.jpg"
+
+  utter_matkul_dkv:
+    - text: "Oh kamu bingung dengan mata kuliah yang harus diambil? Jangan khawa tir, INSTIKI sudah menyiapkan pohon mata kuliah khusus DKV-DGM! Berikut gambarnya:"
+      image: "https://sads.instiki.ac.id/assets/doc/Pohon-DKV.jpg"
+
+  utter_matkul_sk:
+    - text: "Oh kamu bingung dengan mata kuliah yang harus diambil? Jangan khawatir, INSTIKI sudah menyiapkan pohon mata kuliah khusus SK! Berikut gambarnya:"
+      image: "https://sads.instiki.ac.id/assets/doc/Pohon-SK.jpg"
+
+  utter_krs_lunas:
+    - text: "Biaya KRS kamu sebesar {nominal_krs} telah lunas. Selamat menempuh perkuliahan!"
+
+  utter_krs_belum_lunas:
+    - text: "Biaya KRS kamu sebesar {nominal_krs} belum lunas dan sisa pembayaran kamu {tunggakan_krs}. Silakan segera melakukan pembayaran ke nomor virtual account yang tercantum pada 'SADS' → 'Pengajuan KRS' → 'Pengajuan Kelas' agar dapat menempuh perkuliahan."
+
+  utter_ip_saat_ini:
+    - text: "IPK kamu saat ini adalah {ipk}. Luar biasa!🎉 Pencapaian ini menunjukkan dedikasi dan kerja kerasmu selama ini. Namun, ingatlah bahwa IPK hanyalah salah satu indikator kesuksesan."
+
+  utter_sks_saat_ini:
+    - text: "SKS Wajib yang telah anda tempuh adalah {sks_wajib} SKS Wajib dan {sks_pilihan} SKS Pilihan."
+
+  utter_sks_telah_cukup:
+    - text: "Selamat! Kamu telah menempuh SKS melebihi syarat, yaitu {sks_wajib} SKS Wajib dan {sks_pilihan} SKS Pilihan. Silahkan mengikuti Seminar dan Skripsi ya! Dan jangan lupa juga untuk ambil sertifikasi dasar, bidang, dan TOEIC ya!🎉 Semua yang kamu butuhkan sudah disediakan pada https://linktr.ee/kpta_stiki"
+
+  utter_sks_sisa:
+    - text: "Untuk lulus kuliah, kamu harus menempuh {sks_wajib_sisa} SKS Wajib dan {sks_pilihan_sisa} SKS Pilihan lagi. Itu sekitar {jml_matkul_wajib} mata kuliah wajib dan {jml_matkul_pilihan} mata kuliah pilihan lagi untuk kamu ambil."
+
+  utter_pengaduan:
+    - text: "Mohon maaf atas ketidaknyamanan yang kamu alami. Untuk mengadukan masalah, kamu dapat menghubungi Front Office kami melalui WhatsApp https://wa.me/6281339822383"
+
+actions:
+  - action_get_nama_nim
+  - action_get_rekomendasi_matkul
+  - action_get_biaya_krs
+  - action_get_ip_saat_ini
+  - action_get_sks_saat_ini
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

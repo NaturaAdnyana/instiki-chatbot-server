@@ -1,0 +1,6 @@
+rasa-action-server:
+  external:
+    # -- Determine if external URL is used
+    enabled: true
+    # -- URL to Rasa Action Server
+    url: "http://rasa-action-server/webhook"

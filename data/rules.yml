@@ -1,0 +1,32 @@
+version: "3.1"
+
+rules:
+  - rule: Ucapkan 'sampai jumpa' ketika user mengucapkan 'sampai jumpa'
+    steps:
+      - intent: sampai_jumpa
+      - action: utter_sampai_jumpa
+
+  - rule: Ucapkan 'saya bot' ketika user mengucapkan 'saya bot'
+    steps:
+      - intent: saya_bot
+      - action: utter_saya_bot
+
+  - rule: Ucapkan 'sama-sama' ketika user mengucapkan 'terima kasih'
+    steps:
+      - intent: terima_kasih
+      - action: utter_sama_sama
+
+  - rule: Ucapkan 'maaf' ketika user mengucapkan 'menolak'
+    steps:
+      - intent: menolak
+      - action: utter_maaf
+
+  - rule: out-of-scope
+    steps:
+      - intent: out_of_scope
+      - action: utter_maaf
+
+  - rule: Minta user untuk reprase ketika menerima pesan dengan 'low confidence'
+    steps:
+      - intent: nlu_fallback
+      - action: utter_maaf

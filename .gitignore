@@ -1,0 +1,6 @@
+/rasa
+/.rasa
+/results
+/.cache
+/models/*
+/actions/auth/*

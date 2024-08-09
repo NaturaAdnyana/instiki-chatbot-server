@@ -1,0 +1,337 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+  - story: bahagia path 1
+    steps:
+      - user: |
+          selamat siang!
+        intent: salam
+      - action: utter_salam
+      - action: utter_menawarkan_bantuan
+      - user: |
+          luar biasa
+        intent: bahagia
+      - action: utter_bahagia
+
+  - story: bahagia path 2
+    steps:
+      - user: |
+          halo bot!
+        intent: salam
+      - action: utter_salam
+      - user: |
+          gokil
+        intent: bahagia
+      - action: utter_bahagia
+      - user: |
+          sampai jumpa
+        intent: sampai_jumpa
+      - action: utter_sampai_jumpa
+
+  - story: sedih path
+    steps:
+      - user: |
+          om swastyastu
+        intent: salam
+      - action: utter_salam
+      - action: utter_menawarkan_bantuan
+      - user: |
+          sedih
+        intent: buruk
+      - action: utter_perkenalan_pak_made
+      - action: utter_perkenalan_pak_made
+      - action: utter_dapat_membantu
+      - user: |
+          iya
+        intent: afirmasi
+      - action: utter_bahagia
+
+  - story: sedih path
+    steps:
+      - user: |
+          om swastyastu
+        intent: salam
+      - action: utter_salam
+      - action: utter_menawarkan_bantuan
+      - user: |
+          sedih
+        intent: buruk
+      - action: utter_perkenalan_pak_made
+      - action: utter_perkenalan_pak_made
+      - action: utter_dapat_membantu
+      - user: |
+          iya
+        intent: afirmasi
+      - action: utter_bahagia
+
+  - story: bosan path
+    steps:
+      - user: |
+          hai
+        intent: salam
+      - action: utter_salam
+      - action: utter_menawarkan_bantuan
+      - user: |
+          saya merasa bosan
+        intent: bosan
+      - action: utter_solusi_bosan
+      - action: utter_kegiatan_mahasiswa_2
+      - action: utter_dapat_membantu
+      - user: |
+          iya
+        intent: afirmasi
+      - action: utter_bahagia
+
+  - story: kegiatan mahasiswa path
+    steps:
+      - user: |
+          halo
+        intent: salam
+      - action: utter_salam
+      - action: utter_menawarkan_bantuan
+      - user: |
+          ada kegiatan apa saja di INSTIKI?
+        intent: kegiatan_mahasiswa
+      - action: utter_kegiatan_mahasiswa_1
+      - action: utter_kegiatan_mahasiswa_2
+      - action: utter_dapat_membantu
+      - user: |
+          puas
+        intent: afirmasi
+      - action: utter_bahagia
+
+  - story: jadwal kuliah path
+    steps:
+      - user: |
+          halo
+        intent: salam
+      - action: utter_salam
+      - action: utter_menawarkan_bantuan
+      - user: |
+          tolong beritahu saya jadwal kuliah
+        intent: jadwal_kuliah
+      - action: utter_jadwal_kuliah
+      - action: utter_jam_kuliah
+      - action: utter_dapat_membantu
+      - user: |
+          puas
+        intent: afirmasi
+      - action: utter_bahagia
+
+  - story: registrasi path
+    steps:
+      - user: |
+          hi
+        intent: salam
+      - action: utter_salam
+      - action: utter_menawarkan_bantuan
+      - user: |
+          saya ingin tahu tentang proses registrasi
+        intent: registrasi
+      - action: utter_registrasi_1
+      - action: utter_registrasi_2
+      - action: utter_dapat_membantu
+      - user: |
+          ok, terima kasih
+        intent: terima_kasih
+      - action: utter_sama_sama
+
+  - story: biaya daftar ulang path
+    steps:
+      - user: |
+          halo
+        intent: salam
+      - action: utter_salam
+      - action: utter_menawarkan_bantuan
+      - user: |
+          berapa biaya daftar ulang tahun ini?
+        intent: biaya_daftar_ulang
+      - action: utter_biaya_daftar_ulang_1
+      - action: utter_biaya_daftar_ulang_2
+      - action: utter_biaya_daftar_ulang_3
+      - action: utter_dapat_membantu
+      - user: |
+          baiklah, terima kasih
+        intent: terima_kasih
+      - action: utter_sama_sama
+
+  - story: daftar kontak path
+    steps:
+      - user: |
+          hi
+        intent: salam
+      - action: utter_salam
+      - action: utter_menawarkan_bantuan
+      - user: |
+          bagaimana cara mendapatkan daftar kontak kampus?
+        intent: daftar_kontak
+      - action: utter_daftar_kontak
+      - action: utter_email_kampus
+      - action: utter_alamat_kampus
+      - action: utter_dapat_membantu
+      - user: |
+          baiklah, terima kasih
+        intent: terima_kasih
+      - action: utter_sama_sama
+
+  - story: tentang kampus path
+    steps:
+      - user: |
+          hai
+        intent: salam
+      - action: utter_salam
+      - action: utter_menawarkan_bantuan
+      - user: |
+          bisakah Anda memberikan informasi tentang kampus?
+        intent: tentang
+      - action: utter_tentang
+      - action: utter_dapat_membantu
+      - user: |
+          terima kasih
+        intent: terima_kasih
+      - action: utter_sama_sama
+
+  - story: visi misi nilai path
+    steps:
+      - user: |
+          halo
+        intent: salam
+      - action: utter_salam
+      - action: utter_menawarkan_bantuan
+      - user: |
+          apa visi, misi, dan nilai kampus?
+        intent: visi_misi_nilai
+      - action: utter_visi
+      - action: utter_misi
+      - action: utter_nilai
+      - action: utter_dapat_membantu
+      - user: |
+          ok, terima kasih
+        intent: terima_kasih
+      - action: utter_sama_sama
+
+  - story: jurusan path
+    steps:
+      - user: |
+          hi
+        intent: salam
+      - action: utter_salam
+      - action: utter_menawarkan_bantuan
+      - user: |
+          apa jurusan yang tersedia di kampus ini?
+        intent: jurusan
+      - action: utter_jurusan
+      - user: |
+          saya tertarik dengan jurusan ti-mdi
+        intent: jurusan_mdi
+      - action: utter_jurusan_mdi
+      - user: |
+          terima kasih
+        intent: terima_kasih
+      - action: utter_sama_sama
+
+  - story: rekomendasi matkul path
+    steps:
+      - user: |
+          halo
+        intent: salam
+      - action: utter_salam
+      - action: utter_menawarkan_bantuan
+      - user: |
+          Nama saya [John](nama) dengan NIM [20101001](nim)
+        intent: input_nama_nim
+      - action: action_get_nama_nim
+      - action: utter_menawarkan_bantuan_mhs
+      - user: |
+          bisakah Anda memberikan rekomendasi mata kuliah untuk saya?
+        intent: rekomendasi_matkul
+      - action: action_get_rekomendasi_matkul
+      - action: utter_dapat_membantu
+      - user: |
+          terima kasih
+        intent: terima_kasih
+      - action: utter_sama_sama
+
+  - story: berapa krs path
+    steps:
+      - user: |
+          halo
+        intent: salam
+      - action: utter_salam
+      - action: utter_menawarkan_bantuan
+      - user: |
+          Nama saya [Budi](nama) dengan NIM [20101002](nim)
+        intent: input_nama_nim
+      - action: action_get_nama_nim
+      - action: utter_menawarkan_bantuan_mhs
+      - user: |
+          berapa biaya KRS untuk semester ini?
+        intent: biaya_krs
+      - action: action_get_biaya_krs
+      - action: utter_dapat_membantu
+      - user: |
+          baiklah, terima kasih
+        intent: terima_kasih
+      - action: utter_sama_sama
+
+  - story: berapa ip path
+    steps:
+      - user: |
+          halo
+        intent: salam
+      - action: utter_salam
+      - action: utter_menawarkan_bantuan
+      - user: |
+          Nama saya [Budi](nama) dengan NIM [20101002](nim)
+        intent: input_nama_nim
+      - action: action_get_nama_nim
+      - action: utter_menawarkan_bantuan_mhs
+      - user: |
+          berapa IP saya saat ini?
+        intent: ip_saat_ini
+      - action: action_get_ip_saat_ini
+      - action: utter_dapat_membantu
+      - user: |
+          terima kasih
+        intent: terima_kasih
+      - action: utter_sama_sama
+
+  - story: berapa sks path
+    steps:
+      - user: |
+          halo
+        intent: salam
+      - action: utter_salam
+      - action: utter_menawarkan_bantuan
+      - user: |
+          Nama saya [Budi](nama) dengan NIM [20101002](nim)
+        intent: input_nama_nim
+      - action: action_get_nama_nim
+      - action: utter_menawarkan_bantuan_mhs
+      - user: |
+          berapa SKS yang saya ambil saat ini?
+        intent: sks_saat_ini
+      - action: action_get_sks_saat_ini
+      - action: utter_dapat_membantu
+      - user: |
+          baiklah, terima kasih
+        intent: terima_kasih
+      - action: utter_sama_sama
+
+  - story: pengaduan path
+    steps:
+      - user: |
+          hai
+        intent: salam
+      - action: utter_salam
+      - action: utter_menawarkan_bantuan
+      - user: |
+          saya ingin membuat pengaduan
+        intent: pengaduan
+      - action: utter_pengaduan
+      - action: utter_dapat_membantu
+      - user: |
+          terima kasih
+        intent: terima_kasih
+      - action: utter_sama_sama

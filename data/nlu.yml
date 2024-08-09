@@ -1,0 +1,443 @@
+version: "3.1"
+
+nlu:
+  - intent: salam
+    examples: |
+      - hi
+      - hei
+      - halo
+      - hello
+      - salam
+      - permisi
+      - selamat pagi
+      - selamat siang
+      - selamat sore
+      - selamat malam
+      - om swastiastu
+      - assalamualaikum
+
+  - intent: sampai_jumpa
+    examples: |
+      - bye
+      - dadah
+      - see you
+      - goodbye
+      - bye bye
+      - sampai jumpa
+      - selamat tinggal
+      - sampai bertemu lagi
+      - semoga harimu menyenangkan
+
+  - intent: afirmasi
+    examples: |
+      - y
+      - ya
+      - iya
+      - yes
+      - ok
+      - oke
+      - okay
+      - sip
+      - sippp
+      - siap
+      - asiap
+      - benar
+      - betul
+      - tentu
+      - pasti
+
+  - intent: menolak
+    examples: |
+      - no
+      - nope
+      - tidak
+      - bukan
+      - salah
+      - enggak
+      - tidak mau
+      - tidak puas
+      - tidak bisa
+      - tidak suka
+      - tidak yakin
+      - tidak setuju
+      - tidak mungkin
+
+  - intent: bahagia
+    examples: |
+      - puas
+      - good
+      - goks
+      - hebat
+      - keren
+      - bagus
+      - happy
+      - great
+      - gokil
+      - mantap
+      - senang
+      - ganteng
+      - awesome
+      - sempurna
+      - luar biasa
+      - sangat baik
+      - sangat puas
+      - sangat senang
+      - senang sekali
+      - senang banget
+
+  - intent: terima_kasih
+    examples: |
+      - thx
+      - trims
+      - thanks
+      - makasih
+      - thank you
+      - terima kasih
+      - terimakasih banyak
+
+  - intent: buruk
+    examples: |
+      - sedih
+      - sakit
+      - buruk
+      - jelek
+      - rusak
+      - kecewa
+      - hancur
+      - stress
+      - badmood
+      - not good
+      - sakit hati
+
+  - intent: bosan
+    examples: |
+      - bosan
+      - gabut
+      - jenuh
+      - malas
+      - boring
+      - saya gabut
+      - saya jenuh
+      - saya malas
+      - saya bosan
+      - saya tidak ada hobi
+      - saya tidak ada teman
+      - saya tidak ada pacar
+      - saya tidak ada kerjaan
+      - saya tidak ada kegiatan
+      - saya tidak ada teman chat
+      - saya tidak ada teman curhat
+      - saya tidak ada teman bicara
+      - saya tidak ada teman ngobrol
+
+  - intent: saya_bot
+    examples: |
+      - ini bot?
+      - ini siapa?
+      - ini robot?
+      - ini orang?
+      - siapa anda?
+      - ini manusia?
+      - ini bukan bot?
+      - ini bukan orang?
+      - ini bukan manusia?
+      - ini bukan robot?
+      - apakah anda robot?
+      - apakah anda manusia?
+      - saya chat dengan siapa?
+      - saya ngobrol dengan siapa?
+      - saya berbicara dengan siapa?
+      - saya berbincang dengan siapa?
+      - saya berinteraksi dengan siapa?
+      - saya berkomunikasi dengan siapa?
+      - apakah saya sedang berbicara dengan robot?
+      - apakah saya sedang berbicara dengan manusia?
+
+  - intent: kegiatan_mahasiswa
+    examples: |
+      - ormawa
+      - eskul
+      - extra kurikuler
+      - ekstra kurikuler
+      - ormawa di kampus
+      - kegiatan mahasiswa
+      - organisasi mahasiswa
+      - ormawa di kampus apa saja?
+      - apa saja ormawa di instiki?
+      - ekstrakurikuler di instiki
+      - ormawa di instiki apa saja?
+      - apa saja kegiatan mahasiswa?
+      - kegiatan mahasiswa apa saja?
+      - kegiatan mahasiswa di kampus
+      - ada ormawa apa saja di instiki?
+      - kegiatan mahasiswa instiki apa saja?
+      - kegiatan mahasiswa di kampus apa saja?
+      - ada kegiatan mahasiswa apa saja di kampus?
+      - ekstrakurikuler di kampus instiki apa saja?
+
+  - intent: jadwal_kuliah
+    examples: |
+      - jadwal kampus
+      - jadwal kuliah
+      - jadwal instiki
+      - jadwal akademik
+      - jadwal semester
+      - jadwal perkuliahan
+      - jadwal pembelajaran
+      - berikan jadwal kampus
+      - apa saja jadwal kampus?
+      - kapan perkuliahan dimulai?
+      - apa saja jadwal kampus instiki?
+      - bagaimana perkuliahan di instiki?
+
+  - intent: registrasi
+    examples: |
+      - cara daftar
+      - cara mendaftar
+      - cara registrasi
+      - cara daftar kampus
+      - bagaimana cara daftar?
+      - cara daftar ke instiki?
+      - cara mendaftar ke kampus
+      - cara registrasi di kampus
+      - bagaimana cara mendaftar?
+      - cara registrasi ke instiki
+      - apa saja tahapan registrasi?
+      - bagaimana tahapan registrasi?
+      - bagaimana cara daftar kampus?
+      - bagaimana cara mendaftar ke kampus?
+      - bagaimana cara registrasi di kampus?
+      - apa saja tahapan registrasi di instiki?
+
+  - intent: biaya_daftar_ulang
+    examples: |
+      - biaya kuliah
+      - biaya daftar ulang
+      - daftar ulang instiki
+      - berapa biaya kuliah?
+      - biaya kuliah semester
+      - biaya kuliah di kampus
+      - biaya kuliah di instiki
+      - berapa saya harus bayar?
+      - berapa biaya daftar ulang?
+      - biaya daftar ulang di kampus
+      - apa saja biaya daftar ulang?
+      - apa saja tahapan daftar ulang?
+      - berapa biaya daftar ulang di instiki?
+
+  - intent: daftar_kontak
+    examples: |
+      - kontak
+      - kontak resmi
+      - kontak email
+      - kontak kampus
+      - kontak instiki
+      - kontak whatsapp
+      - whatsapp instiki
+      - boleh minta kontak?
+      - kontak email kampus
+      - kontak resmi kampus
+      - kontak resmi instiki
+      - kontak whatsapp kampus
+      - boleh minta kontak resmi?
+      - boleh minta kontak email?
+      - boleh minta kontak whatsapp?
+
+  - intent: tentang
+    examples: |
+      - profil
+      - tentang
+      - profil kampus
+      - tentang kampus
+      - tentang instiki
+      - kampus apa ini?
+      - ini kampus apa?
+      - apa itu instiki?
+      - instiki itu kampus apa?
+      - bagaimana profil kampus?
+      - jelasin tentang kampus instiki
+
+  - intent: visi_misi_nilai
+    examples: |
+      - visi dan misi kampus
+      - apa visi misi instiki?
+      - apa visi dan misi kampus?
+      - visi, misi, dan nilai instiki
+      - visi, misi, dan nilai kampus
+      - apa visi, misi, dan nilai instiki?
+      - jelasin visi, misi, dan nilai kampus
+      - sebutkan visi, misi, dan nilai instiki
+
+  - intent: jurusan
+    examples: |
+      - jurusan
+      - jurusan yang ada
+      - jurusan apa saja?
+      - jurusan yang dibuka
+      - jurusan yang tersedia
+      - jurusan yang ditawarkan
+      - jurusan yang ada di instiki
+      - jurusan yang dibuka kampus
+      - jurusan apa saja di instiki?
+      - jurusan yang dibuka di kampus
+      - jurusan yang tersedia di instiki
+      - jurusan yang ditawarkan di kampus
+      - ada jurusan apa saja di instiki?
+
+  - intent: jurusan_mdi
+    examples: |
+      - apa itu mdi?
+      - apa itu jurusan mdi?
+      - apa itu jurusan ti-mdi?
+      - apa itu manajemen data & informasi?
+      - apa itu manajemen data dan informasi?
+      - apa itu jurusan manajemen data & informasi?
+      - apa itu jurusan teknik informatika manajemen data dan informasi?
+
+  - intent: jurusan_kab
+    examples: |
+      - apa itu kab?
+      - apa itu jurusan kab?
+      - apa itu jurusan ti-kab?
+      - apa itu komputer akuntansi & bisnis?
+      - apa itu komputer akuntansi dan bisnis?
+      - apa itu jurusan komputer akuntansi & bisnis?
+      - apa itu jurusan teknik informatika komputer akuntansi dan bisnis?
+
+  - intent: jurusan_tip
+    examples: |
+      - apa itu tip?
+      - apa itu jurusan tip?
+      - apa itu jurusan ti-tip?
+      - apa itu teknologi informasi pariwisata?
+      - apa itu jurusan teknologi informasi pariwisata?
+
+  - intent: jurusan_bd
+    examples: |
+      - apa itu bd?
+      - apa itu md?
+      - apa itu jurusan mb?
+      - apa itu jurusan bd?
+      - apa itu bisnis digital?
+      - apa itu manajemen bisnis?
+      - apa itu jurusan bd-mb?
+      - apa itu jurusan bisnis digital?
+      - apa itu jurusan manajemen bisnis?
+      - apa itu jurusan bisnis digital manajemen bisnis?
+
+  - intent: jurusan_dkv
+    examples: |
+      - apa itu dkv?
+      - apa itu dgm?
+      - apa itu jurusan dkv?
+      - apa itu jurusan dgm?
+      - apa itu desain komunikasi visual?
+      - apa itu desain grafis & multimedia?
+      - apa itu jurusan desain komunikasi visual?
+      - apa itu jurusan teknik informatika desain komunikasi visual?
+
+  - intent: jurusan_sk
+    examples: |
+      - apa itu SK?
+      - apa itu jurusan SK?
+      - apa itu sistem komputer?
+      - jelaskan tentang jurusan SK
+      - apa itu jurusan sistem komputer?
+      - apa itu jurusan teknik informatika sistem komputer?
+
+  - intent: input_nama_nim
+    examples: |
+      - Halo, saya [Bill Gates](nama) NIM [19003012](nim)
+      - Perkenalkan, saya [Elon Musk](nama) dan NIM [20102104](nim)
+      - Hi, perkenalkan saya [Mark Zuckerberg](nama) NIM [20102105](nim)
+      - Anda bisa panggil saya [Michael Jackson](nama) NIM saya [19003011](nim)
+      - Nama saya [Steve Jobs](nama) NIM [19003013](nim)
+      - Saya [I Gede Surya Dharma](nama) NIM [21102011](nim)
+      - Nama: [I Wayan Budi Setiadi](nama) NIM: [19003010](nim)
+      - Nama saya [Ni Putu Suci Ningsih](nama) NIM saya [20102102](nim)
+      - Nama lengkap saya [I Kadek Andi Dharma](nama) dengan NIM [19004020](nim)
+      - Saya bernama [Ni Made Ayu Lestari](nama) dengan NIM [20102103](nim)
+
+  - intent: rekomendasi_matkul
+    examples: |
+      - rekomendasi matkul
+      - rekomendasi mata kuliah
+      - berikan rekomendasi matkul
+      - berikan rekomendasi mata kuliah
+      - mata kuliah apa yang harus diambil?
+      - mata kuliah apa yang direkomendasikan?
+      - mata kuliah apa yang harus diambil semester ini
+      - mata kuliah apa yang harus diambil semester depan
+
+  - intent: biaya_krs
+    examples: |
+      - biaya krs
+      - berapa biaya krs?
+      - biaya krs semester
+      - biaya krs di kampus
+      - status pembayaran krs
+      - apa status pembayaran krs saya?
+      - berapa saya harus bayar untuk krs?
+      - berapa biaya krs semester ini?
+      - biaya krs di kampus berapa?
+
+  - intent: ip_saat_ini
+    examples: |
+      - ip saat ini
+      - ipk saat ini
+      - berapa ip saya saat ini?
+      - berapa ipk saya saat ini?
+      - ip saya berapa?
+      - ipk saya berapa?
+
+  - intent: sks_saat_ini
+    examples: |
+      - sks saat ini
+      - SKS yang sudah diambil
+      - sudah lulus berapa sks?
+      - sudah ambil berapa SKS?
+      - sisanya berapa sks untuk lulus?
+      - berapa SKS yang sudah saya ambil?
+      - sks yang sudah saya ambil berapa?
+      - berapa SKS yang sudah saya luluskan?
+      - sks yang sudah saya luluskan berapa?
+      - tinggal berapa SKS lagi untuk lulus?
+      - berapa sks yang harus saya ambil lagi?
+
+  - intent: pengaduan
+    examples: |
+      - pengaduan
+      - keluhan
+      - komplain
+      - aduan
+      - laporan
+      - pengaduan mahasiswa
+      - keluhan mahasiswa
+      - komplain mahasiswa
+      - aduan mahasiswa
+      - laporan mahasiswa
+      - pengaduan mahasiswa kampus
+      - keluhan mahasiswa kampus
+      - komplain mahasiswa kampus
+      - aduan mahasiswa kampus
+      - laporan mahasiswa kampus
+
+  - intent: masalah_krs
+    examples: |
+      - masalah krs
+      - masalah krs semester
+      - masalah krs di kampus
+      - masalah pembayaran krs
+      - masalah pembayaran krs semester
+      - masalah pembayaran krs di kampus
+      - masalah pembayaran krs mahasiswa
+      - masalah pembayaran krs mahasiswa semester
+      - masalah pembayaran krs mahasiswa di kampus
+
+  - intent: out_of_scope
+    examples: |
+      - Saya ingin memesan makanan
+      - Berapa 1 + 1?
+      - Siapa presiden Indonesia?
+      - Apa klub bola favorit anda?
+      - Apa cuaca hari ini?

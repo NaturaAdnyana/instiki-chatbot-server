@@ -1,0 +1,223 @@
+version: "3.1"
+
+stories:
+  - story: bahagia path
+    steps:
+      - intent: salam
+      - action: utter_salam
+      - action: utter_menawarkan_bantuan
+      - intent: bahagia
+      - action: utter_bahagia
+
+  - story: sedih path 1
+    steps:
+      - intent: buruk
+      - action: utter_ceriakan
+      - action: utter_perkenalan_pak_made
+      - action: utter_penjelasan_pak_made
+      - action: utter_dapat_membantu
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: sedih path 2
+    steps:
+      - intent: buruk
+      - action: utter_ceriakan
+      - action: utter_perkenalan_pak_made
+      - action: utter_penjelasan_pak_made
+      - action: utter_dapat_membantu
+      - intent: menolak
+      - action: utter_maaf
+
+  - story: bosan path
+    steps:
+      - intent: bosan
+      - action: utter_solusi_bosan
+      - action: utter_kegiatan_mahasiswa_2
+      - action: utter_dapat_membantu
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: kegiatan mahasiswa path
+    steps:
+      - intent: kegiatan_mahasiswa
+      - action: utter_kegiatan_mahasiswa_1
+      - action: utter_kegiatan_mahasiswa_2
+      - action: utter_dapat_membantu
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: jadwal kuliah path
+    steps:
+      - intent: jadwal_kuliah
+      - action: utter_jadwal_kuliah
+      - action: utter_jam_kuliah
+      - action: utter_dapat_membantu
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: registrasi path
+    steps:
+      - intent: registrasi
+      - action: utter_registrasi_1
+      - action: utter_registrasi_2
+      - action: utter_dapat_membantu
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: biaya daftar ulang path
+    steps:
+      - intent: biaya_daftar_ulang
+      - action: utter_biaya_daftar_ulang_1
+      - action: utter_biaya_daftar_ulang_2
+      - action: utter_biaya_daftar_ulang_3
+      - action: utter_dapat_membantu
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: daftar kontak path
+    steps:
+      - intent: daftar_kontak
+      - action: utter_daftar_kontak
+      - action: utter_email_kampus
+      - action: utter_alamat_kampus
+      - action: utter_dapat_membantu
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: tentang kampus path
+    steps:
+      - intent: tentang
+      - action: utter_tentang
+      - action: utter_dapat_membantu
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: visi misi nilai path
+    steps:
+      - intent: visi_misi_nilai
+      - action: utter_visi
+      - action: utter_misi
+      - action: utter_nilai
+      - action: utter_dapat_membantu
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: jurusan path
+    steps:
+      - intent: jurusan
+      - action: utter_jurusan
+      - checkpoint: check_jurusan
+
+  - story: jurusan mdi path
+    steps:
+      - checkpoint: check_jurusan
+      - intent: jurusan_mdi
+      - action: utter_jurusan_mdi
+      - action: utter_jurusan_mdi_2
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: jurusan kab path
+    steps:
+      - checkpoint: check_jurusan
+      - intent: jurusan_kab
+      - action: utter_jurusan_kab
+      - action: utter_jurusan_kab_2
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: jurusan tip path
+    steps:
+      - checkpoint: check_jurusan
+      - intent: jurusan_tip
+      - action: utter_jurusan_tip
+      - action: utter_jurusan_tip_2
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: jurusan bd path
+    steps:
+      - checkpoint: check_jurusan
+      - intent: jurusan_bd
+      - action: utter_jurusan_bd
+      - action: utter_jurusan_bd_2
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: jurusan dkv path
+    steps:
+      - checkpoint: check_jurusan
+      - intent: jurusan_dkv
+      - action: utter_jurusan_dkv
+      - action: utter_jurusan_dkv_2
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: jurusan sk path
+    steps:
+      - checkpoint: check_jurusan
+      - intent: jurusan_sk
+      - action: utter_jurusan_sk
+      - action: utter_jurusan_sk_2
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: nama nim path
+    steps:
+      - intent: input_nama_nim
+        entities:
+          - nama: "John"
+          - nim: "12345678"
+      - slot_was_set:
+          - nama: "John"
+          - nim: "12345678"
+      - action: action_get_nama_nim
+
+  - story: rekomendasi matkul path
+    steps:
+      - intent: rekomendasi_matkul
+      - action: action_get_rekomendasi_matkul
+      - action: utter_dapat_membantu
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: biaya krs path
+    steps:
+      - intent: biaya_krs
+      - action: action_get_biaya_krs
+      - action: utter_dapat_membantu
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: IP saat ini path
+    steps:
+      - intent: ip_saat_ini
+      - action: action_get_ip_saat_ini
+      - action: utter_dapat_membantu
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: SKS saat ini path
+    steps:
+      - intent: sks_saat_ini
+      - action: action_get_sks_saat_ini
+      - action: utter_dapat_membantu
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: pengaduan path
+    steps:
+      - intent: pengaduan
+      - action: utter_pengaduan
+      - action: utter_dapat_membantu
+      - intent: afirmasi
+      - action: utter_bahagia
+
+  - story: masalah krs path
+    steps:
+      - intent: masalah_krs
+      - action: utter_masalah_krs
+      - action: utter_dapat_membantu
+      - intent: afirmasi
+      - action: utter_bahagia
